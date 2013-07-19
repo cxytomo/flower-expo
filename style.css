@@ -74,7 +74,7 @@ a {
 }
 
 #nav .nav-wrap {
-  width: 960px;
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -109,7 +109,7 @@ a {
 }
 
 .wrapper {
-  width: 960px;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -135,6 +135,7 @@ a {
   margin-bottom: 10px;
   text-align: center;
   font-size: 36px;
+  letter-spacing: 1px;
 }
 
 #header h2 {
@@ -209,36 +210,54 @@ a {
   padding-bottom: 50px;
 }
 
+#showFlower .header {
+  width: 1000px;
+  margin: 20px auto 0 auto;
+  padding: 10px 0;
+  border-bottom: 5px solid #fdd88a;
+}
+
+#showFlower .header h1 {
+  font-size: 36px;
+  color: #fdd88a;
+  margin: 0;
+}
+
 #showFlower .row {
+  padding-bottom: 60px;
+}
+
+#showFlower .row:first-child {
   padding-top: 40px;
 }
 
 /*height,width equal to image's size*/
 #showFlower .archive li {
   float: left;
-  height: 194px;
+  height: 240px;
+  width: 194px;
   position: relative;
-  margin-left: 40px;
-  overflow: hidden;
-}
-
-#showFlower .archive li img {
-  padding: 5px;
-  background-color: whitesmoke;
+  margin-left: 74px;
+  position: relative;
 }
 
 #showFlower ul li:first-child {
   margin-left: 0;
 }
 
-#showFlower .archive li span {
+#showFlower .classify-label {
   position: absolute;
   display: inline-block;
-  padding: 5px 10px;
-  width: 100%;
-  background-color: rgba(0,0,0,0.4);
-  bottom: 0;
+  width: 194px;
+  background-color: #fdd88a;
+  bottom: -38px;
   left: 0;
+}
+
+#showFlower .classify-label span {
+  padding: 10px;
+  display: inline-block;
+  color: #518aa5;
 }
 
 #flower-lightbox {

@@ -39,8 +39,19 @@ $('#flower-lightbox').mousewheel(function(e, delta) {
 
 $('#showFlower .archive a').click(function(e) {
 	e = e || window.event;
-	var tar = e.target || e.srcElement;
-	
-	console.log(tar.parentNode.parentNode.className);
+	var tar = e.target || e.srcElement
+	, attrClass;
+	attrClass = tar.parentNode.parentNode.className;
+	console.log();
 	e.preventDefault();
+});
+
+$('#nav ul li a').click(function(e) {
+	e = e || window.event;
+	var tar = e.target || e.srcElement
+	, attrClass = tar.className;
+	if(attrClass !== 'active') {
+		$('#nav .active')[0].className = "";
+		tar.className = "active";
+	}
 });
