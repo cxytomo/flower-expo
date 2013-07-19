@@ -1,0 +1,286 @@
+html,
+body,
+div,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+/*  overflow: hidden;*/
+}
+
+body {
+  font-family: Arial;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header, #showFlower, #ticket {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.clearfix:after {
+  content: '';
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  font-size: 0;
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+#header {
+  background: url('images/bg.JPG') 50% 32%;
+  min-height: 590px;
+}
+
+#nav {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 60px;
+  background-color: #609ec1;
+}
+
+#nav a {
+  color: white;
+  line-height: 50px;
+}
+
+#nav .nav-wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#nav .logo {
+  display: inline-block;
+  width: 255px;
+  padding-top: 10px;
+  text-indent: -10000px;
+  background: url('images/logo.png') 50% 50% no-repeat; 
+}
+
+#nav:first-child {
+  font-size: 32px;
+}
+
+#nav li {
+  float: left;
+  margin-left: 1px;
+}
+
+#nav li a {
+  display: inline-block;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-family: Arial;
+  border-top: 10px solid transparent;
+}
+
+#nav .active {
+  border-top: 10px solid rgba(0,0,0,0.2);
+}
+
+.wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header .wrapper {
+  padding-top: 150px;
+  color: white;
+}
+
+#header .wrapper a {
+  color: white;
+}
+
+#header .wrapper .banner {
+  width: 300px;
+  /*background-color: rgba(205,80,74,0.5);*/
+}
+
+#header h1 {
+  padding: 10px 20px;
+  border-top: 1px dotted white;
+  border-bottom: 1px dotted white;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 36px;
+}
+
+#header h2 {
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 5px 0;
+}
+ 
+#header .wrapper .intro {
+  width: 100%;
+}
+
+
+#header .wrapper .banner-wrap {
+  padding: 20px;
+}
+
+.banner-wrap .content {
+  margin-top: 80px;
+  text-indent: 20px;
+  text-align: center;
+}
+
+.banner-wrap .content li {
+  margin-bottom: 5px;
+}
+
+#header .wrapper .but-wrap {
+  margin: 20px auto 50px auto;
+  text-align: center;
+  width: 600px;
+}
+
+#header .wrapper .but-wrap .butn {
+  font-size: 20px;
+  background-color: rgba(205,80,74,0.85);
+  padding: 10px 80px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#header .scrollToFlower {
+  text-align: center;
+}
+
+#header .scrollToFlower a {
+  display: inline-block;
+  text-align: center;
+  width: 70px;
+  height: 30px;
+  background-color: #ed6801;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  padding-top: 8px;
+}
+
+#header .scrollToFlower a:hover {
+  background-color: #ed5801;
+  background-image: -moz-linear-gradient(top, #ed6801, #ed5801); /* Firefox */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ed6801), color-stop(1, #ed5801)); /* Saf4+, Chrome */
+}
+
+#header .scrollToFlower .icon-chevron-down:before {
+  color: whitesmoke;
+}
+
+#showFlower {
+  background-color: #ed6801;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+#showFlower .row {
+  padding-top: 40px;
+}
+
+/*height,width equal to image's size*/
+#showFlower .archive li {
+  float: left;
+  height: 194px;
+  position: relative;
+  margin-left: 40px;
+  overflow: hidden;
+}
+
+#showFlower .archive li img {
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+#showFlower ul li:first-child {
+  margin-left: 0;
+}
+
+#showFlower .archive li span {
+  position: absolute;
+  display: inline-block;
+  padding: 5px 10px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  bottom: 0;
+  left: 0;
+}
+
+#flower-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1002;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1001;
+}
+
+#flower-lightbox header {
+  text-align: center;
+  margin-top: 200px;
+}
+
+#flower-lightbox header span {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+#flower-lightbox .content {
+  width: 100%;
+}
+
+#flower-lightbox .sliderwrap {
+  height: 194px;
+  width: 2150px;
+  padding: 20px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#flower-lightbox .sliderwrap li {
+  float: left;
+  margin-left: 20px;
+  width: 194px;
+  height: 194px;
+}
