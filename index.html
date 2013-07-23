@@ -10,7 +10,7 @@
 	<header id="header">
 		<nav id="nav">
 			<div class="nav-wrap clearfix">
-				<a href="mousewheel.html" class="alignleft logo">FLOWER EXPO</a>
+				<a href="#header" class="alignleft logo jump">FLOWER EXPO</a>
 				<ul class="alignright">
 					<li><a href="#header" class="active">关于花展</a></li>
 					<li><a href="#showFlower" class="">花展展区</a></li>
@@ -32,12 +32,12 @@
 				</div>
 			</div>
 			<div class="but-wrap clearfix">
-				<a href="#ticket" class="butn alignleft">花展购票</a>
-				<a href="#showFlower" class="butn alignright">花展展区</a>
+				<a href="#ticket" class="butn alignleft jump">花展购票</a>
+				<a href="#showFlower" class="butn alignright jump">花展展区</a>
 			</div>
 		</div>
 		<div class="scrollToFlower">
-			<a href="#showFlower"><i class="icon-chevron-down icon-large"></i></a>
+			<a href="#showFlower" class="jump"><i class="icon-chevron-down icon-large"></i></a>
 		</div>
 	</header>
 	<section id="showFlower">
@@ -96,7 +96,10 @@
 			</div>
 		</div>
 		<div id="flower-lightbox">
-			<header><span>精品展区</span></header>
+			<header>
+				<a href="#" class="closeBox"><i class="icon-remove-sign icon-large"></i></a>
+				<span></span>
+			</header>
 			<div class="content">
 				<ul class="sliderwrap clearfix">
 					<li>
@@ -134,7 +137,43 @@
 		</div>
 	</section>
 	<section id="ticket">
-		<div class="wrapper"></div>
+		<div class="online">
+			<div class="header">
+				<h1>在线购票</h1>
+			</div>
+			<div class="wrapper">
+				<div class="price">
+					<img src="images/ticket.png" alt="halfPrice" data-price="10">
+					<i class="icon-remove icon-large"></i>
+					<div class="cal clearfix">
+						<span class="amount"><a href="#" class="" data-spm-anchor-id="2013.1.0.0">-</a><input id="" type="text" class="" value="0" maxlength="8" title="请输入购买量"><a href="#" class="" data-spm-anchor-id="">﹢</a>张</span>
+						<span class="halfTotal">0</span>
+						<span class="unit">元</span>
+					</div>
+				</div>
+				<div class="price">
+					<img src="images/ticket2.png" alt="fullPrice" data-price="20">
+					<i class="icon-remove icon-large"></i>
+					<div class="cal clearfix">
+						<span class="amount"><a href="#" class="" data-spm-anchor-id="2013.1.0.0">-</a><input id="" type="text" class="" value="0" maxlength="8" title="请输入购买量"><a href="#" class="" data-spm-anchor-id="">﹢</a>张</span>
+						<span class="fullTotal">0</span>
+						<span class="unit">元</span>
+					</div>
+				</div>
+				<div class="total">
+					
+				</div>
+			</div>
+		</div>
+		<div class="onscene">
+			<div class="header">
+				<h1>现场购票</h1>
+			</div>
+			<div class="wrapper">
+				
+			</div>
+		</div>
+		
 	</section>
 	<footer id="footer"></footer>
 	<script type="text/javascript" src="js/jquery-1.8.2.js"></script> 

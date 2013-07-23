@@ -14,6 +14,7 @@ html {
 body {
   font-family: Arial;
   color: white;
+  background-color: #3c3a34;
 }
 
 li {
@@ -210,14 +211,14 @@ a {
   padding-bottom: 50px;
 }
 
-#showFlower .header {
+#showFlower .header, #ticket .header {
   width: 1000px;
   margin: 20px auto 0 auto;
   padding: 10px 0;
   border-bottom: 5px solid #fdd88a;
 }
 
-#showFlower .header h1 {
+#showFlower .header h1, #ticket .header h1 {
   font-size: 36px;
   color: #fdd88a;
   margin: 0;
@@ -269,18 +270,38 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.8);
   z-index: 1001;
 }
 
 #flower-lightbox header {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 168px;
+  height: 29px;
+  position: relative;
+}
+
+#flower-lightbox .closeBox {
+  position: absolute;
+  right: 10px;
+  top: -158px;
+}
+
+#flower-lightbox .closeBox:hover .icon-remove-sign:before {
+  color: #c0bbbb;
+}
+
+#flower-lightbox .closeBox .icon-remove-sign:before {
+  color: whitesmoke;
 }
 
 #flower-lightbox header span {
-  background-color: rgba(0,0,0,0.5);
-  color: white;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background-image: -moz-linear-gradient(top, #f5f5f5, #c0bbbb); /* Firefox */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f5f5f5), color-stop(1, #c0bbbb)); /* Saf4+, Chrome */
+  color: #333;
 }
 
 #flower-lightbox .content {
@@ -294,12 +315,79 @@ a {
   overflow: hidden;
   position: absolute;
   left: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.9);
 }
 
 #flower-lightbox .sliderwrap li {
+  overflow: hidden;
   float: left;
   margin-left: 20px;
   width: 194px;
   height: 194px;
+}
+
+#ticket {
+  height: 400px;
+  background-color: #3c3a34;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 700, from(#47443d), to(#3c3a34), color-stop(25%, blue), color-stop(40%, green), color-stop(60%, red), color-stop(80%, purple)); /* old WebKit Syntax */  
+  background-image: -webkit-radial-gradient(center center, circle contain, #47443d 0%, #3c3a34 100%); /* New WebKit syntax */  
+  background-image: -moz-radial-gradient(center center, circle contain, #47443d 0%, #3c3a34 100% 100%);  
+  background-image: -ms-radial-gradient(center center, circle contain, #47443d 0%, #3c3a34 100% 100%); /* IE10+ */  
+  background-image: -o-radial-gradient(center center, circle contain, #47443d 0%, #3c3a34 100% 100%); /* Opera (13?) */  
+}
+
+#ticket .online .header {
+  padding-top: 100px;
+}
+
+#ticket .wrapper {
+  padding-top: 20px;
+}
+
+#ticket .online .price {
+  padding-top: 10px;
+  position: relative;
+}
+
+#ticket .online .price .amount {
+  display: inline-block;
+}
+
+#ticket .online .price .halfTotal, #ticket .online .price .fullTotal {
+  color: white;
+}
+
+#ticket .online .price .cal {
+  position: absolute;
+  top: 68px;
+  left: 50%;
+}
+
+#ticket .online .price .cal span {
+  float: left; 
+}
+
+#ticket .online .price .cal span:first-child {
+  margin: 0 100px;
+}
+
+#ticket .online .price .cal .fullTotal, #ticket .online .price .cal .halfTotal {
+  width: 100px;
+}
+
+#ticket .online .price .cal .unit {
+  float: right;
+  margin-right: 0;
+}
+
+#ticket .online .price span a{
+  color: white;
+}
+
+#ticket .online .price .icon-remove:before {
+  position: absolute;
+  top: 64px;
+  left: 38%;
+  color: white;
+  font-size: 30px;
 }
