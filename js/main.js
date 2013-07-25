@@ -30,7 +30,6 @@ $('#flower-lightbox .sliderwrap').mousewheel(function(e, delta){
 	var left = parseInt($('#flower-lightbox .sliderwrap').css('left'));
 		left = left+(delta * 100);
 	if(left <= 0 && left >= leftBdry) {
-		console.log(left);
 		$('#flower-lightbox .sliderwrap').css('left',left + 'px');
 	}
 	e.preventDefault();
@@ -69,15 +68,60 @@ $('#flower-lightbox .closeBox').click(function(e){
 	e.preventDefault();
 });
 
-$('.jump').click(function(e) {
-	e = e || windwo.event;
-	var tar = e.target || e.srcElement
-	, tarHref = tar.href
-	, attrHref = $('#nav .active')[0].href;
-	console.log(tar.href);
-	if(tarHref !== attrHref) {
-		$('#nav .active')[0].className = "";
-		$('#nav ul a[href="'+tarHref+'"]')[0].className = "active";
+function sum() {
+	var len = $('#ticket .price').length
+	, sum = 0
+	, detail;
+	for(var i = 0; i < len; i++) {
+		detail = $('#ticket .price')[i].getElementsByClassName('tempTotal')[0].childNodes[0].nodeValue;
+		console.log("detail" + i + ':' + detail);
+		sum = sum + parseInt(detail);
 	}
+	$('#ticket .totalwrap .sum')[0].childNodes[0].nodeValue = sum;
+}
 
+//ticket
+$('#ticket .price .amount a').click(function(e) {
+	e = e || window.event;
+	var tar = e.target || e.srcElement
+	, attrClass = tar.className
+	, tarInput = tar.parentNode.getElementsByTagName("input")[0]
+	, amount = parseInt(tarInput.value)
+	, price = parseFloat(tar.parentNode.parentNode.parentNode.getElementsByClassName('ticketCatg')[0].dataset.price)
+	, total = tar.parentNode.parentNode.getElementsByClassName('tempTotal')[0].childNodes[0];
+	if(attrClass == "plus") {
+		amount += 1;
+	}
+	if(attrClass == "minus") {
+		if(amount > 0) {
+			amount -= 1;
+		}
+	}
+	tarInput.value = amount;
+	total.nodeValue = amount * price;
+	sum();
+	e.preventDefault();
 });
+
+$('#ticket .price .amount input').bind('input',function(e) {
+	e = e || window.event;
+	var tar = e.target || e.srcElement
+	, tarValue = tar.value
+	, total = tar.parentNode.parentNode.getElementsByClassName('tempTotal')[0].childNodes[0]
+	, price = parseFloat(tar.parentNode.parentNode.parentNode.getElementsByClassName('ticketCatg')[0].dataset.price);
+	total.nodeValue = tarValue * price;
+	sum();
+});
+
+/*
+onchange = function(e) {
+	console.log('in');
+	e = e || window.event;
+	var tar = e.target || e.srcElement
+	, tarValue = tar.value
+	, total = tar.parentNode.parentNode.getElementsByClassName('tempTotal')[0].childNodes[0]
+	, price = parseFloat(tar.parentNode.parentNode.parentNode.getElementsByClassName('ticketCatg')[0].dataset.price);
+	total.nodeValue = tarValue * price;
+	sum();
+};
+*/

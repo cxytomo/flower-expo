@@ -10,7 +10,7 @@
 	<header id="header">
 		<nav id="nav">
 			<div class="nav-wrap clearfix">
-				<a href="#header" class="alignleft logo jump">FLOWER EXPO</a>
+				<a href="#header" class="alignleft logo">FLOWER EXPO</a>
 				<ul class="alignright">
 					<li><a href="#header" class="active">关于花展</a></li>
 					<li><a href="#showFlower" class="">花展展区</a></li>
@@ -32,12 +32,12 @@
 				</div>
 			</div>
 			<div class="but-wrap clearfix">
-				<a href="#ticket" class="butn alignleft jump">花展购票</a>
-				<a href="#showFlower" class="butn alignright jump">花展展区</a>
+				<a href="#ticket" class="butn alignleft">花展购票</a>
+				<a href="#showFlower" class="butn alignright">花展展区</a>
 			</div>
 		</div>
 		<div class="scrollToFlower">
-			<a href="#showFlower" class="jump"><i class="icon-chevron-down icon-large"></i></a>
+			<a href="#showFlower" class=""><i class="icon-chevron-down icon-large"></i></a>
 		</div>
 	</header>
 	<section id="showFlower">
@@ -143,25 +143,29 @@
 			</div>
 			<div class="wrapper">
 				<div class="price">
-					<img src="images/ticket.png" alt="halfPrice" data-price="10">
+					<img class="ticketCatg"  src="images/ticket.png" alt="halfPrice" data-price="10">
 					<i class="icon-remove icon-large"></i>
 					<div class="cal clearfix">
-						<span class="amount"><a href="#" class="" data-spm-anchor-id="2013.1.0.0">-</a><input id="" type="text" class="" value="0" maxlength="8" title="请输入购买量"><a href="#" class="" data-spm-anchor-id="">﹢</a>张</span>
-						<span class="halfTotal">0</span>
+						<span class="amount"><a href="#" class="minus">-</a><input id="" type="text" class="" value="0" maxlength="8" title="请输入购买量"><a href="#" class="plus">﹢</a>张</span>
+						<span class="tempTotal">0</span>
 						<span class="unit">元</span>
 					</div>
 				</div>
 				<div class="price">
-					<img src="images/ticket2.png" alt="fullPrice" data-price="20">
+					<img class="ticketCatg" src="images/ticket2.png" alt="fullPrice" data-price="20">
 					<i class="icon-remove icon-large"></i>
 					<div class="cal clearfix">
-						<span class="amount"><a href="#" class="" data-spm-anchor-id="2013.1.0.0">-</a><input id="" type="text" class="" value="0" maxlength="8" title="请输入购买量"><a href="#" class="" data-spm-anchor-id="">﹢</a>张</span>
-						<span class="fullTotal">0</span>
+						<span class="amount"><a href="#" class="minus">-</a><input id="" type="text" class="" value="0" maxlength="8" title="请输入购买量"><a href="#" class="plus">﹢</a>张</span>
+						<span class="tempTotal">0</span>
 						<span class="unit">元</span>
 					</div>
 				</div>
 				<div class="total">
-					
+					<span class="totalwrap">
+						<span class="bill">总计：￥</span>
+						<span class="sum">0</span>
+					</span>
+					<a href="#" class="btn">立即购买</a>
 				</div>
 			</div>
 		</div>
@@ -170,7 +174,20 @@
 				<h1>现场购票</h1>
 			</div>
 			<div class="wrapper">
-				
+				<div class="timeOpen content">
+					<h1>开放时间</h1>
+					<p>平日: 10:00-17:00</p>
+					<p>周末: 09:30-17:00</p>
+				</div>
+				<div class="ticketRule content">
+					<h1>售票</h1>
+					<p>成人门票: ￥20</p>
+					<p>学生票: ￥10(第一凭证为二代身份证，其次为二维码短信、及大学生有效证件)</p>
+					<p>特殊人群: 1.2米以下儿童免票(不含1.2米);1.2米---1.5米（不含1.5米）的儿童半票</p>
+				</div>
+				<div class="transport content">
+					<h1>交通</h1>
+				</div>	
 			</div>
 		</div>
 		

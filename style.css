@@ -188,7 +188,7 @@ a {
   text-align: center;
   width: 70px;
   height: 30px;
-  background-color: #ed6801;
+  background-color: #f89c48;
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
@@ -197,8 +197,8 @@ a {
 
 #header .scrollToFlower a:hover {
   background-color: #ed5801;
-  background-image: -moz-linear-gradient(top, #ed6801, #ed5801); /* Firefox */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ed6801), color-stop(1, #ed5801)); /* Saf4+, Chrome */
+  background-image: -moz-linear-gradient(top, #f8a85e, #f89c48); /* Firefox */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8a85e), color-stop(1, #f89c48)); /* Saf4+, Chrome */
 }
 
 #header .scrollToFlower .icon-chevron-down:before {
@@ -206,7 +206,7 @@ a {
 }
 
 #showFlower {
-  background-color: #ed6801;
+  background-color: #f89c48;
   padding-top: 70px;
   padding-bottom: 50px;
 }
@@ -329,7 +329,7 @@ a {
 #ticket {
   height: 400px;
   background-color: #3c3a34;
-  background-image: -webkit-gradient(radial, center center, 0, center center, 700, from(#47443d), to(#3c3a34), color-stop(25%, blue), color-stop(40%, green), color-stop(60%, red), color-stop(80%, purple)); /* old WebKit Syntax */  
+  background-image: -webkit-gradient(radial, center center, 0, center center, 700, from(#47443d), to(#3c3a34)); /* old WebKit Syntax */  
   background-image: -webkit-radial-gradient(center center, circle contain, #47443d 0%, #3c3a34 100%); /* New WebKit syntax */  
   background-image: -moz-radial-gradient(center center, circle contain, #47443d 0%, #3c3a34 100% 100%);  
   background-image: -ms-radial-gradient(center center, circle contain, #47443d 0%, #3c3a34 100% 100%); /* IE10+ */  
@@ -353,8 +353,9 @@ a {
   display: inline-block;
 }
 
-#ticket .online .price .halfTotal, #ticket .online .price .fullTotal {
+#ticket .online .price .tempTotal {
   color: white;
+  width: 90px;
 }
 
 #ticket .online .price .cal {
@@ -368,26 +369,65 @@ a {
 }
 
 #ticket .online .price .cal span:first-child {
-  margin: 0 100px;
+  margin: 0 170px 0 40px;
 }
 
-#ticket .online .price .cal .fullTotal, #ticket .online .price .cal .halfTotal {
-  width: 100px;
+#ticket .online .price .cal input {
+  width: 127px;
 }
 
 #ticket .online .price .cal .unit {
   float: right;
   margin-right: 0;
+  width: 20px;
+  text-align: right;
 }
 
-#ticket .online .price span a{
+#ticket .online .price span a {
   color: white;
+}
+
+#ticket .online .price .minus {
+  padding: 0 5px;
 }
 
 #ticket .online .price .icon-remove:before {
   position: absolute;
   top: 64px;
-  left: 38%;
+  left: 420px;
   color: white;
   font-size: 30px;
+}
+
+#ticket .total {
+  text-align: right;
+  margin: 10px 0 20px 0;
+  border: 2px solid #fdd88a;
+}
+
+#ticket .total .btn {
+  color: white;
+  display: inline-block;
+  padding: 5px 22px;
+  background-color: #fdd88a;
+}
+
+#ticket .total .totalwrap {
+  margin-right: 10px;
+} 
+
+#ticket .total .sum {
+  display: inline-block;
+  text-align: left;
+}
+
+#ticket .onscene .content {
+  text-indent: 15px;
+}
+
+#ticket .onscene .content h1{
+  font-size: 20px;
+  border-left: 5px solid #fdd88a;
+  padding-left: 10px;
+  text-indent: 0;
 }
