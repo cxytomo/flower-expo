@@ -125,3 +125,11 @@ onchange = function(e) {
 	sum();
 };
 */
+
+//scrollTo
+(function(){
+	$('#nav .alignright a, #header .but-wrap a, #header .scrollToFlower a').click(function(e){
+		console.log(this);
+		$('html, body').scrollTo(this.hash, this.hash);
+	});
+})();
