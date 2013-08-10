@@ -129,7 +129,7 @@ onchange = function(e) {
 //scrollTo
 (function(){
 	$('#nav .alignright a, #header .but-wrap a, #header .scrollToFlower a').click(function(e){
-		console.log(this);
+		e.preventDefault();
 		$('html, body').scrollTo(this.hash, this.hash);
 	});
 })();

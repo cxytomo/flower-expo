@@ -55,7 +55,7 @@ a {
 /* close commented backslash hack */
 
 #header {
-  background: url('images/bg.JPG') 50% 32%;
+  background: url('../images/bg.JPG') 50% 32%;
   min-height: 590px;
 }
 
@@ -84,7 +84,7 @@ a {
   width: 255px;
   padding-top: 10px;
   text-indent: -10000px;
-  background: url('images/logo.png') 50% 50% no-repeat; 
+  background: url('../images/logo.png') 50% 50% no-repeat; 
 }
 
 #nav:first-child {
