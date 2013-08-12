@@ -52,6 +52,10 @@ $('#showFlower .archive a').click(function(e) {
 	e.preventDefault();
 });
 
+function activate(hash){
+	$('#nav .active').removeClass('active');
+	$('#nav ul a[href="' + hash + '"]').addClass('active')
+}
 $('#nav ul li a').click(function(e) {
 	e = e || window.event;
 	var tar = e.target || e.srcElement
@@ -131,5 +135,6 @@ onchange = function(e) {
 	$('#nav .alignright a, #header .but-wrap a, #header .scrollToFlower a').click(function(e){
 		e.preventDefault();
 		$('html, body').scrollTo(this.hash, this.hash);
+		return activate(this.hash);
 	});
 })();
