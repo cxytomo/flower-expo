@@ -192,7 +192,7 @@ a {
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
-  padding-top: 8px;
+  padding-top: 2px;
 }
 
 #header .scrollToFlower a:hover {
@@ -347,6 +347,14 @@ a {
 #ticket .online .price {
   padding-top: 10px;
   position: relative;
+}
+
+#ticket .online .price:nth-child(2) {
+  padding-bottom: 10px;
+}
+
+#ticket .online .price img {
+  vertical-align: middle;
 }
 
 #ticket .online .price .amount {
