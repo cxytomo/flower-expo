@@ -213,7 +213,7 @@ a {
 
 #showFlower .header, #ticket .header {
   width: 1000px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   padding: 10px 0;
   border-bottom: 5px solid #fdd88a;
 }
